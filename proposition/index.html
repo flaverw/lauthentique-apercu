@@ -42,10 +42,19 @@ h2{font-family:'Crimson Text',serif;font-size:23px;color:var(--noir);margin:4px 
 .why{display:grid;grid-template-columns:1fr 1fr;gap:9px}
 .why div{background:#fff;border:1px solid #eee;border-left:3px solid var(--rouge);border-radius:0 10px 10px 0;padding:10px;font-size:12.5px}
 .why b{font-family:'Crimson Text',serif;font-size:14px;color:var(--noir);display:block}
-.tarif{background:linear-gradient(135deg,#161616,#2a2a2a);color:#fff;border-radius:14px;padding:20px;text-align:center}
-.tarif .k{color:#e8b3b1}
-.tarif b{font-family:'Crimson Text',serif;font-size:19px;display:block;margin:5px 0 6px}
-.tarif p{font-size:13px;color:#cfcfcf}
+.gamme{display:flex;flex-direction:column;gap:12px}
+.f{border:1px solid #eee;border-radius:14px;padding:15px 17px;background:#fff}
+.f .fk{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rouge);font-weight:700}
+.f .fn{font-family:'Crimson Text',serif;font-size:21px;color:var(--noir);display:block;margin:1px 0 2px}
+.f .fp{font-size:13px;font-weight:600;color:var(--noir);margin-bottom:8px}
+.f ul{list-style:none;margin:0;padding:0}
+.f li{position:relative;padding:4px 0 4px 15px;font-size:13px;line-height:1.5;color:#444}
+.f li::before{content:'—';position:absolute;left:0;color:var(--rouge);font-weight:700}
+.f.origine{background:#141414;border-color:#141414}
+.f.origine .fk{color:#e8b3b1}
+.f.origine .fn,.f.origine .fp{color:#fff}
+.f.origine li{color:#d9d2cf}
+.f.origine li::before{color:#e8b3b1}
 .note{font-size:11.5px;color:#999;font-style:italic;text-align:center;padding:0 22px}
 .bar{position:fixed;bottom:0;left:0;right:0;background:#fff;box-shadow:0 -4px 20px rgba(0,0,0,.1);padding:11px 14px;display:flex;justify-content:center;z-index:50}
 .bar a{flex:1;max-width:300px;text-align:center;background:var(--rouge);color:#fff;font-weight:600;letter-spacing:.5px;border-radius:999px;padding:14px;font-size:14.5px;text-decoration:none}
@@ -109,10 +118,43 @@ h2{font-family:'Crimson Text',serif;font-size:23px;color:var(--noir);margin:4px 
   </section>
 
   <section style="padding-top:0">
-    <div class="tarif"><div class="k serif" style="font-size:12px;letter-spacing:1px;text-transform:uppercase">Le tarif</div>
-      <b>Transparent, de vive voix</b>
-      <p>La réservation vous appartient, sans abonnement obligatoire ni engagement. Le détail, simplement, lors de l'échange.</p>
+    <div class="k">La gamme — trois formules</div>
+    <h2>Vous choisissez votre formule</h2>
+    <div class="gamme">
+      <div class="f origine">
+        <div class="fk">Le point de départ</div>
+        <b class="fn">Origine</b>
+        <div class="fp">299 € · puis 99 €/mois</div>
+        <ul>
+          <li>La création du site (celui de la maquette) et sa mise en ligne : 299 €.</li>
+          <li>Puis 99 €/mois, sans engagement de durée : hébergement, nom de domaine, suivi léger — modifications simples (horaires, prix, photos), sauvegardes, petites corrections.</li>
+          <li>Compris au départ : les 5 guides pas-à-pas et l'étude d'économies sous 48 h.</li>
+        </ul>
+      </div>
+      <div class="f">
+        <div class="fk">Origine + l'atelier</div>
+        <b class="fn">Singulier</b>
+        <div class="fp">+200 €/mois</div>
+        <ul>
+          <li>Tout Origine, plus le kit physique façonné par notre atelier partenaire :</li>
+          <li>carte NFC prototype personnalisée — on approche le téléphone, votre site s'ouvre ;</li>
+          <li>textiles prototypes brodés à votre nom, déclinés en plusieurs couleurs au fil de l'abonnement ;</li>
+          <li>chevalet QR de comptoir. Les prototypes évoluent pendant l'abonnement.</li>
+        </ul>
+      </div>
+      <div class="f">
+        <div class="fk">Sur mesure</div>
+        <b class="fn">Everywhere</b>
+        <div class="fp">Sur mesure, de vive voix</div>
+        <ul>
+          <li>L'équipe habillée : textiles brodés pour chaque membre, tailles et couleurs au choix, réassort saisonnier.</li>
+          <li>La panoplie NFC complète : cartes pour toute l'équipe, plaque de comptoir, chevalets de table, stickers vitrine, porte-clés — dont « votre avis en un tap ».</li>
+          <li>Le site premium : animations signature de votre métier, modules avancés (réservation, commande, back-office selon le métier), séance photo, pages supplémentaires.</li>
+          <li>Le suivi renforcé : statistiques mensuelles commentées, priorité de support, formation IA en visio chaque trimestre, étude d'économies renouvelée chaque année.</li>
+        </ul>
+      </div>
     </div>
+    <p class="note" style="margin-top:12px">Sans engagement de durée. Le détail se valide ensemble, de vive voix, lors de notre échange.</p>
   </section>
   <a href="../etude/?e=L%27Authentique" style="display:block;margin:6px 22px 12px;text-decoration:none;background:linear-gradient(100deg,#22453a,#356453);border-radius:16px;padding:20px 22px;color:#fff">
     <div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:#c9a565">En bonus · sous 48 h</div>
