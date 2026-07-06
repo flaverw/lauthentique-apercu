@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>L'Authentique — Une maison, deux salons · Louvroil &amp; Joyeuse</title>
+<meta name="description" content="Démonstration Everywhere — déclinaison créative pour L'Authentique, coiffeur visagiste styliste à Louvroil (Nord) et Joyeuse (Ardèche).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivoire:#F7F3EE;
+  --ivoire2:#F1EAE2;
+  --encre:#161210;
+  --rouge:#BC0C06;
+  --taupe:#8A8178;
+  --ligne:#E2D8CD;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Archivo',Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ivoire);color:var(--encre);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+::selection{background:var(--rouge);color:#fff}
+
+/* ---------- le fil (progression de lecture) ---------- */
+.fil-lecture{position:fixed;top:0;left:0;width:3px;height:100vh;z-index:60;pointer-events:none;background:transparent}
+.fil-lecture i{display:block;width:100%;height:100%;background:var(--rouge);transform-origin:top;transform:scaleY(0)}
+
+/* ---------- bandeau démo ---------- */
+.demo-bar{position:fixed;top:0;left:0;right:0;z-index:70;background:var(--encre);color:#EDE6DE;font-size:11px;letter-spacing:.8px;text-align:center;padding:7px 12px}
+.demo-bar b{color:#E8B3B1;font-weight:600}
+.demo-bar a{color:#E8B3B1;font-weight:600;text-decoration:none;margin-left:12px;padding-left:12px;border-left:1px solid rgba(255,255,255,.25);white-space:nowrap}
+.demo-bar a:hover{color:#fff;text-decoration:underline}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;padding:90px 20px 70px;isolation:isolate}
+.hero .fil-hero{position:absolute;top:0;left:50%;width:1px;height:100%;background:linear-gradient(to bottom,var(--rouge) 0,var(--rouge) 34%,transparent 34.2%,transparent 65.8%,var(--ligne) 66%,var(--ligne) 100%);z-index:-1}
+.hero .metier{font-size:12px;letter-spacing:6px;text-transform:uppercase;color:var(--taupe);margin-bottom:26px;background:var(--ivoire);padding:4px 18px}
+.hero h1{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(3.4rem,13vw,9.5rem);line-height:.95;background:var(--ivoire);padding:0 24px}
+.hero .maison{font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,2.6vw,1.75rem);color:var(--rouge);margin-top:26px;background:var(--ivoire);padding:2px 18px}
+.hero .regions{display:flex;align-items:center;gap:22px;margin-top:44px;background:var(--ivoire);padding:6px 10px}
+.hero .regions .r{text-align:center}
+.hero .regions .r .dep{font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--taupe)}
+.hero .regions .r .ville{font-family:var(--serif);font-size:1.6rem;font-weight:600;line-height:1.15}
+.hero .regions .noeud{width:9px;height:9px;border-radius:50%;background:var(--rouge);position:relative;flex:none}
+.hero .regions .noeud::before,.hero .regions .noeud::after{content:'';position:absolute;top:50%;width:34px;height:1px;background:var(--rouge)}
+.hero .regions .noeud::before{right:12px}
+.hero .regions .noeud::after{left:12px}
+.hero .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--taupe)}
+.hero .cote{position:absolute;top:50%;font-size:10.5px;letter-spacing:5px;text-transform:uppercase;color:var(--taupe);writing-mode:vertical-rl}
+.hero .cote.g{left:26px;transform:translateY(-50%) rotate(180deg)}
+.hero .cote.d{right:26px;transform:translateY(-50%)}
+
+/* ---------- rubans / sections ---------- */
+section{position:relative}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.k{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--rouge);font-weight:600;display:flex;align-items:center;gap:14px}
+.k::before{content:'';width:44px;height:1px;background:var(--rouge)}
+.t2{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.06;margin-top:16px}
+.t2 em{font-style:italic;color:var(--rouge)}
+
+/* ---------- la maison : diptyque ---------- */
+.maison-sec{padding:110px 0 90px;background:var(--ivoire)}
+.dipty{display:grid;grid-template-columns:1fr 1px 1fr;gap:0;margin-top:64px;position:relative}
+.dipty .axe{background:linear-gradient(to bottom,var(--rouge),var(--ligne));position:relative}
+.dipty .axe::before,.dipty .axe::after{content:'';position:absolute;left:50%;transform:translateX(-50%);width:11px;height:11px;border-radius:50%;background:var(--ivoire);border:2.5px solid var(--rouge)}
+.dipty .axe::before{top:-5px}
+.dipty .axe::after{bottom:-5px}
+.volet{padding:10px 54px 0}
+.volet .dep{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--rouge);font-weight:600}
+.volet h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(2rem,4vw,3rem);line-height:1.05;margin:8px 0 14px}
+.volet .role{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--taupe);margin-bottom:16px}
+.volet p{font-size:15px;color:#4c443e;max-width:44ch}
+.volet.d{text-align:right}
+.volet.d p{margin-left:auto}
+.volet .adr{margin-top:22px;font-family:var(--serif);font-size:1.15rem;font-style:italic}
+.volet .tel{display:inline-block;margin-top:8px;font-weight:600;font-size:15px;text-decoration:none;border-bottom:1.5px solid var(--rouge);padding-bottom:1px}
+.volet .tel:hover{color:var(--rouge)}
+.maison-note{text-align:center;margin-top:70px}
+.maison-note .grand{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,3vw,2rem);max-width:34ch;margin:0 auto}
+.maison-note .src{font-size:11px;letter-spacing:1px;color:var(--taupe);margin-top:12px;text-transform:uppercase}
+
+/* ---------- photos salon ---------- */
+.salon-photos{padding:40px 0 100px;background:var(--ivoire)}
+.ph-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;margin-top:20px}
+.ph{position:relative;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;transition:transform .8s ease}
+.ph:hover img{transform:scale(1.035)}
+.ph figcaption{position:absolute;left:0;bottom:0;background:var(--ivoire);padding:8px 18px 8px 0;font-family:var(--serif);font-style:italic;font-size:1.05rem}
+.ph figcaption::after{content:'';display:block;width:44px;height:1px;background:var(--rouge);margin-top:4px}
+
+/* ---------- le geste ---------- */
+.geste-sec{padding:110px 0;background:var(--encre);color:var(--ivoire)}
+.geste-sec .k{color:#E8B3B1}
+.geste-sec .k::before{background:#E8B3B1}
+.geste-sec .t2 em{color:#E8B3B1}
+.geste-intro{max-width:56ch;color:#BBB1A6;margin-top:18px;font-size:15px}
+.gestes{margin-top:70px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(247,243,238,.16)}
+.geste{padding:38px 34px 46px;border-left:1px solid rgba(247,243,238,.16);position:relative}
+.geste:first-child{border-left:none}
+.geste .num{font-family:var(--serif);font-style:italic;font-size:1rem;color:#E8B3B1}
+.geste h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.9rem,3.4vw,2.7rem);margin:6px 0 22px}
+.geste ul{list-style:none}
+.geste li{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px dotted rgba(247,243,238,.22);font-size:14px}
+.geste li .d{color:#8F857B;font-size:12.5px;white-space:nowrap}
+.geste .img{margin-top:28px;overflow:hidden}
+.geste .img img{aspect-ratio:3/4;object-fit:cover;filter:saturate(.92);transition:transform .8s ease}
+.geste:hover .img img{transform:scale(1.04)}
+.geste-note{margin-top:34px;font-size:12px;color:#8F857B;font-style:italic}
+.geste-loreal{margin-top:10px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#BBB1A6}
+
+/* ---------- avis ---------- */
+.avis-sec{padding:110px 0 90px;background:var(--ivoire2)}
+.avis-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.note-bloc{text-align:right}
+.note-bloc .n{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(3rem,7vw,5rem);line-height:1;color:var(--rouge)}
+.note-bloc .s{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--taupe);max-width:24ch}
+.avis-flux{margin-top:56px;overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent)}
+.avis-rail{display:flex;gap:22px;width:max-content;animation:defile 60s linear infinite}
+.avis-flux:hover .avis-rail{animation-play-state:paused}
+@keyframes defile{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.avis-carte{width:340px;flex:none;background:var(--ivoire);border:1px solid var(--ligne);padding:26px 26px 22px;position:relative}
+.avis-carte::before{content:'“';position:absolute;top:6px;right:18px;font-family:var(--serif);font-size:4.5rem;line-height:1;color:var(--rouge);opacity:.16}
+.avis-carte p{font-family:var(--serif);font-style:italic;font-size:1.08rem;line-height:1.45}
+.avis-carte .qui{margin-top:16px;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--taupe)}
+.avis-carte .qui b{color:var(--encre)}
+.avis-src{margin-top:26px;font-size:11.5px;color:var(--taupe);font-style:italic}
+
+/* ---------- réservation ---------- */
+.resa-sec{padding:110px 0;background:var(--ivoire)}
+.resa-sub{max-width:58ch;color:#4c443e;font-size:15px;margin-top:16px}
+.resa-box{margin-top:54px;border:1px solid var(--ligne);background:#fff}
+.resa-steps{display:flex;border-bottom:1px solid var(--ligne)}
+.resa-step{flex:1;display:flex;align-items:center;gap:10px;padding:16px 18px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--taupe);border-left:1px solid var(--ligne);cursor:default}
+.resa-step:first-child{border-left:none}
+.resa-step .n{width:24px;height:24px;flex:none;border-radius:50%;border:1.5px solid var(--ligne);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600}
+.resa-step.on{color:var(--encre)}
+.resa-step.on .n{border-color:var(--rouge);background:var(--rouge);color:#fff}
+.resa-step.done{color:var(--encre);cursor:pointer}
+.resa-step.done .n{border-color:var(--rouge);color:var(--rouge)}
+.resa-panel{padding:38px;min-height:340px}
+.rp-title{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.9rem}
+.rp-hint{font-size:13.5px;color:var(--taupe);margin-top:4px}
+.rp-back{background:none;border:none;font-family:var(--sans);font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--taupe);cursor:pointer;margin-bottom:14px;padding:0}
+.rp-back:hover{color:var(--rouge)}
+.rp-salons{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+.rp-salon{text-align:left;background:var(--ivoire);border:1.5px solid var(--ligne);padding:24px;cursor:pointer;font-family:var(--sans);transition:border-color .25s}
+.rp-salon:hover,.rp-salon.on{border-color:var(--rouge)}
+.rp-salon .dep{font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--rouge);font-weight:600}
+.rp-salon .ville{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.7rem;margin:2px 0 10px}
+.rp-salon .l{font-size:13px;color:#4c443e;margin-top:3px}
+.rp-prestas{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
+.rp-pr{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 4px;border-bottom:1px dotted var(--ligne);cursor:pointer;background:none;border-left:none;border-right:none;border-top:none;font-family:var(--sans);text-align:left;width:100%}
+.rp-pr:hover .nm{color:var(--rouge)}
+.rp-pr .nm{font-size:14.5px;font-weight:500}
+.rp-pr .du{font-size:12px;color:var(--taupe);white-space:nowrap}
+.rp-pr .px{font-size:13px;font-weight:600;white-space:nowrap}
+.rp-days{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.rp-day{border:1.5px solid var(--ligne);background:var(--ivoire);padding:10px 14px;text-align:center;cursor:pointer;font-family:var(--sans);min-width:76px}
+.rp-day .dw{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--taupe)}
+.rp-day .dn{font-family:var(--serif);font-size:1.4rem;font-weight:600;line-height:1.1}
+.rp-day .mo{font-size:10.5px;color:var(--taupe)}
+.rp-day:hover,.rp-day.on{border-color:var(--rouge)}
+.rp-day.on{background:#fff}
+.rp-slots{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
+.rp-slot{border:1.5px solid var(--ligne);background:#fff;padding:8px 15px;font-size:13.5px;cursor:pointer;font-family:var(--sans)}
+.rp-slot:hover,.rp-slot.on{border-color:var(--rouge);color:var(--rouge);font-weight:600}
+.rp-slot.off{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+.rp-recap{background:var(--ivoire);border-left:3px solid var(--rouge);padding:16px 20px;margin-top:24px;font-size:14px}
+.rp-recap .l{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--rouge);font-weight:600;margin-bottom:4px}
+.rp-form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.rp-fld{display:flex;flex-direction:column;gap:5px}
+.rp-fld.full{grid-column:1/-1}
+.rp-fld label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--taupe)}
+.rp-fld input,.rp-fld textarea{border:1.5px solid var(--ligne);background:#fff;padding:11px 13px;font-family:var(--sans);font-size:14.5px}
+.rp-fld input:focus,.rp-fld textarea:focus{outline:none;border-color:var(--rouge)}
+.rp-cta{margin-top:22px;background:var(--rouge);color:#fff;border:none;padding:15px 30px;font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;width:100%}
+.rp-cta:hover{background:#9d0a05}
+.rp-note{font-size:12px;color:var(--taupe);font-style:italic;margin-top:14px;text-align:center}
+.rp-demo{margin-top:26px;border:1.5px dashed var(--rouge);background:#FDF6F4;padding:22px;text-align:center}
+.rp-demo .t{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.4rem;color:var(--rouge)}
+.rp-demo p{font-size:13.5px;color:#4c443e;margin-top:6px}
+
+/* ---------- pratique ---------- */
+.prat-sec{padding:110px 0 90px;background:var(--ivoire2)}
+.prat-grid{display:grid;grid-template-columns:1fr 1px 1fr;margin-top:60px}
+.prat-axe{background:linear-gradient(to bottom,var(--rouge),var(--ligne))}
+.prat{padding:6px 50px 0}
+.prat.d{text-align:right}
+.prat .dep{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--rouge);font-weight:600}
+.prat h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:2.1rem;margin:6px 0 4px}
+.prat .adr{font-size:14.5px;color:#4c443e}
+.prat .tel{display:inline-block;margin:12px 0 22px;font-weight:600;font-size:16px;text-decoration:none;border-bottom:1.5px solid var(--rouge);padding-bottom:1px}
+.prat .tel:hover{color:var(--rouge)}
+.horaires{width:100%;border-collapse:collapse;font-size:13.5px}
+.horaires td{padding:6.5px 0;border-bottom:1px dotted var(--ligne)}
+.horaires td:first-child{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--taupe)}
+.horaires td:last-child{text-align:right;font-weight:500}
+.prat.d .horaires td:first-child{text-align:right}
+.prat.d .horaires td:last-child{text-align:left}
+.prat.g .horaires td:last-child{text-align:right}
+.horaires .off td:last-child{color:var(--taupe);font-style:italic;font-weight:400}
+.prat .maps{display:inline-block;margin-top:20px;font-size:11.5px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--encre);border:1.5px solid var(--encre);padding:9px 18px}
+.prat .maps:hover{background:var(--encre);color:var(--ivoire)}
+.prat-social{text-align:center;margin-top:64px;font-size:13px;color:#4c443e}
+.prat-social a{font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--rouge);padding-bottom:1px}
+.prat-social a:hover{color:var(--rouge)}
+
+/* ---------- footer ---------- */
+footer{background:var(--encre);color:#BBB1A6;padding:64px 24px 110px;text-align:center}
+footer .logo-c{background:#fff;display:inline-block;padding:12px 20px;margin-bottom:22px}
+footer .logo-c img{height:44px}
+footer .duo{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:#EDE6DE}
+footer .sep{width:44px;height:1px;background:var(--rouge);margin:20px auto}
+footer .li{font-size:12px;line-height:1.9}
+footer .li a{color:#EDE6DE;text-decoration:none}
+footer .li a:hover{text-decoration:underline}
+footer .demo-note{margin-top:26px;font-size:11px;color:#8F857B;font-style:italic;max-width:64ch;margin-left:auto;margin-right:auto}
+
+/* ---------- flottants ---------- */
+.pastille-version{position:fixed;left:18px;bottom:20px;z-index:80;background:var(--encre);color:#EDE6DE;text-decoration:none;font-size:12px;letter-spacing:.6px;font-weight:600;padding:11px 18px;border-radius:999px;border:1px solid rgba(247,243,238,.25);box-shadow:0 10px 26px rgba(20,17,15,.3)}
+.pastille-version:hover{color:#fff;border-color:#E8B3B1}
+.pastille-version .los{color:#E8B3B1;margin-right:7px}
+.btn-resa-float{position:fixed;right:18px;bottom:20px;z-index:80;background:var(--rouge);color:#fff;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.6px;padding:13px 22px;border-radius:999px;box-shadow:0 10px 26px rgba(188,12,6,.35)}
+.btn-resa-float:hover{background:#9d0a05}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.vu{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .gestes{grid-template-columns:1fr}
+  .geste{border-left:none;border-top:1px solid rgba(247,243,238,.16)}
+  .geste:first-child{border-top:none}
+  .ph-grid{grid-template-columns:1fr}
+  .rp-prestas{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .hero .cote{display:none}
+  .dipty,.prat-grid{grid-template-columns:1fr}
+  .dipty .axe,.prat-axe{display:none}
+  .volet,.prat{padding:0;text-align:left !important}
+  .volet.d p{margin-left:0}
+  .volet.d{margin-top:52px;padding-top:44px;border-top:1px solid var(--ligne)}
+  .prat.d{margin-top:52px;padding-top:44px;border-top:1px solid var(--ligne)}
+  .prat.d .horaires td:first-child{text-align:left}
+  .prat.d .horaires td:last-child{text-align:right}
+  .rp-salons,.rp-form{grid-template-columns:1fr}
+  .resa-panel{padding:24px 18px}
+  .resa-step .lbl{display:none}
+  .resa-step{justify-content:center;padding:14px 6px}
+  .demo-bar{font-size:9.5px;padding:6px 8px}
+  .demo-bar a{margin-left:8px;padding-left:8px}
+  .pastille-version{font-size:11px;padding:9px 14px;bottom:16px;left:12px}
+  .btn-resa-float{font-size:12px;padding:11px 16px;bottom:16px;right:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  .avis-rail{animation:none}
+  .rv{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="fil-lecture" aria-hidden="true"><i id="fil-i"></i></div>
+
+<div class="demo-bar">✦ Démonstration <b>Everywhere</b> — proposition de nouvelle direction artistique pour L'Authentique<a href="../offre/">Voir l'offre →</a></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="fil-hero" aria-hidden="true"></div>
+  <span class="cote g" aria-hidden="true">Nord · Louvroil</span>
+  <span class="cote d" aria-hidden="true">Ardèche · Joyeuse</span>
+  <p class="metier">Coiffeur · Visagiste · Styliste</p>
+  <h1>L'Authentique</h1>
+  <p class="maison">Une seule maison. Deux salons.</p>
+  <div class="regions">
+    <div class="r">
+      <div class="dep">Nord — 59</div>
+      <div class="ville">Louvroil</div>
+    </div>
+    <div class="noeud" aria-hidden="true"></div>
+    <div class="r">
+      <div class="dep">Ardèche — 07</div>
+      <div class="ville">Joyeuse</div>
+    </div>
+  </div>
+  <span class="scroll-cue">Suivez le fil ↓</span>
+</header>
+
+<!-- ============ LA MAISON ============ -->
+<section class="maison-sec" id="maison">
+  <div class="wrap">
+    <p class="k rv">La maison</p>
+    <h2 class="t2 rv">Un salon né dans le Nord,<br>qui vit aussi <em>en Ardèche</em>.</h2>
+
+    <div class="dipty">
+      <div class="volet d rv">
+        <p class="dep">Nord — 59</p>
+        <h3>Louvroil</h3>
+        <p class="role">Le salon d'origine — siège de la maison</p>
+        <p>C'est ici que L'Authentique coiffe, conseille et colore, sur la route d'Avesnes. Le salon que les avis décrivent : un accueil chaleureux, un cadre soigné, et le temps pris pour chaque client.</p>
+        <p class="adr">192 Route d'Avesnes<br>59720 Louvroil</p>
+        <a class="tel" href="tel:+33327398148">03 27 39 81 48</a>
+      </div>
+      <div class="axe" aria-hidden="true"></div>
+      <div class="volet g rv">
+        <p class="dep">Ardèche — 07</p>
+        <h3>Joyeuse</h3>
+        <p class="role">Le second salon — ouvert en mars 2025</p>
+        <p>La même maison, la même exigence, au cœur de l'Ardèche : rue de la Calade, le salon de Joyeuse accueille depuis mars 2025 — bacs massants et prise de temps compris, comme le racontent les premiers avis.</p>
+        <p class="adr">12 Rue de la Calade<br>07260 Joyeuse</p>
+        <a class="tel" href="tel:+33648738488">06 48 73 84 88</a>
+      </div>
+    </div>
+
+    <div class="maison-note rv">
+      <p class="grand">« Ce salon porte très bien son nom : authentique. »</p>
+      <p class="src">Extrait d'un avis Google publié sur le site de L'Authentique</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHOTOS ============ -->
+<section class="salon-photos">
+  <div class="wrap">
+    <div class="ph-grid">
+      <figure class="ph rv"><img src="img/slide1.jpg" alt="Le salon : fauteuil, grand miroir et murs taupe" loading="lazy"><figcaption>Le salon</figcaption></figure>
+      <figure class="ph rv"><img src="img/slide2.jpg" alt="Les bacs à shampooing du salon" loading="lazy"><figcaption>Les bacs</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LE GESTE ============ -->
+<section class="geste-sec" id="gestes">
+  <div class="wrap">
+    <p class="k rv">Le geste</p>
+    <h2 class="t2 rv">Couper. Colorer. <em>Soigner.</em></h2>
+    <p class="geste-intro rv">Trois gestes, un même métier : visagiste. La coupe se décide face au miroir, en fonction de votre visage et de votre style — pour les femmes, les hommes et les enfants.</p>
+
+    <div class="gestes">
+      <article class="geste rv">
+        <p class="num">— 01</p>
+        <h3>Couper</h3>
+        <ul>
+          <li><span>Coupe femme + brushing</span><span class="d">45 min</span></li>
+          <li><span>Shampooing, coupe, coiffage</span><span class="d">45 min</span></li>
+          <li><span>Coupe homme</span><span class="d">20 min</span></li>
+          <li><span>Coupe enfant</span><span class="d">20 min</span></li>
+        </ul>
+        <div class="img"><img src="img/slide5.jpg" alt="Carré plongeant brillant" loading="lazy"></div>
+      </article>
+      <article class="geste rv">
+        <p class="num">— 02</p>
+        <h3>Colorer</h3>
+        <ul>
+          <li><span>Couleur + coupe</span><span class="d">1 h 30</span></li>
+          <li><span>Mèches / balayage</span><span class="d">2 h</span></li>
+        </ul>
+        <div class="img"><img src="img/slide4.jpg" alt="Chevelure cuivrée bouclée" loading="lazy"></div>
+      </article>
+      <article class="geste rv">
+        <p class="num">— 03</p>
+        <h3>Soigner</h3>
+        <ul>
+          <li><span>Lissage au Steampod</span><span class="d">1 h</span></li>
+          <li><span>Soin profond</span><span class="d">30 min</span></li>
+          <li><span>Coiffage / brushing</span><span class="d">30 min</span></li>
+        </ul>
+        <div class="img"><img src="img/slide3.jpg" alt="Cheveux longs lissés et brillants" loading="lazy"></div>
+      </article>
+    </div>
+
+    <p class="geste-note rv">Prestations reprises de la carte de L'Authentique — les durées sont indicatives, la carte complète et les tarifs se consultent au salon et à la réservation.</p>
+    <p class="geste-loreal rv">Partenaire L'Oréal Professionnel</p>
+  </div>
+</section>
+
+<!-- ============ AVIS ============ -->
+<section class="avis-sec" id="avis">
+  <div class="wrap">
+    <div class="avis-head">
+      <div>
+        <p class="k rv">Ils le disent</p>
+        <h2 class="t2 rv">Le mot des <em>clients</em>.</h2>
+      </div>
+      <div class="note-bloc rv">
+        <div class="n">4,9/5</div>
+        <p class="s">Note Google du salon de Louvroil</p>
+      </div>
+    </div>
+  </div>
+  <div class="avis-flux rv" aria-label="Avis clients publiés sur Google">
+    <div class="avis-rail" id="avis-rail">
+      <div class="avis-carte"><p>Un accueil chaleureux et professionnel dans un cadre élégant et bien entretenu. Les fauteuils du bac shampooing vous offrent les bénéfices d'un massage, très agréable.</p><p class="qui"><b>Nad. V.</b> — avis Google</p></div>
+      <div class="avis-carte"><p>Ce salon porte très bien son nom : Authentique, comme les deux coiffeuses qui sont très professionnelles, agréables et souriantes.</p><p class="qui"><b>Ludo</b> — avis Google</p></div>
+      <div class="avis-carte"><p>Avec mes cheveux frisés très secs, j'avais besoin d'une professionnelle qui sache bien s'en occuper. C'est chose faite avec Sandrine. Sandrine et Irina sont top.</p><p class="qui"><b>Coralie S.</b> — avis Google</p></div>
+      <div class="avis-carte"><p>Sympathie, professionnalisme : ici on ne bâcle pas le client. On prend le temps. Bravo, et notamment à Sandrine !</p><p class="qui"><b>Karine G.</b> — avis Google</p></div>
+      <div class="avis-carte"><p>La coupe correspond exactement à mon attente. Ambiance chaleureuse. Je recommande.</p><p class="qui"><b>Muriel G.</b> — avis Google</p></div>
+      <div class="avis-carte"><p>Salon au top. Coiffeuses très professionnelles. Très bons moments de détente assurés.</p><p class="qui"><b>Martine D.</b> — avis Google</p></div>
+    </div>
+  </div>
+  <div class="wrap"><p class="avis-src rv">Avis publiés sur Google et affichés sur le site actuel de L'Authentique — extraits reproduits tels quels.</p></div>
+</section>
+
+<!-- ============ RÉSERVATION ============ -->
+<section class="resa-sec" id="reserver">
+  <div class="wrap">
+    <p class="k rv">Réserver</p>
+    <h2 class="t2 rv">D'abord votre salon.<br><em>Ensuite, le reste.</em></h2>
+    <p class="resa-sub rv">Deux salons, deux agendas : la réservation commence par le choix du salon — Louvroil ou Joyeuse — puis n'affiche que ses prestations et ses créneaux.</p>
+
+    <div class="resa-box rv">
+      <div class="resa-steps" id="rp-steps"></div>
+      <div class="resa-panel" id="rp-panel"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRATIQUE ============ -->
+<section class="prat-sec" id="pratique">
+  <div class="wrap">
+    <p class="k rv">Pratique</p>
+    <h2 class="t2 rv">Deux adresses, <em>un même fil</em>.</h2>
+
+    <div class="prat-grid">
+      <div class="prat d g rv">
+        <p class="dep">Nord — 59</p>
+        <h3>Louvroil</h3>
+        <p class="adr">192 Route d'Avesnes, 59720 Louvroil</p>
+        <a class="tel" href="tel:+33327398148">03 27 39 81 48</a>
+        <table class="horaires">
+          <tr><td>Lundi</td><td>09:00 – 12:00 · 13:15 – 18:00</td></tr>
+          <tr class="off"><td>Mardi</td><td>Fermé</td></tr>
+          <tr><td>Mercredi</td><td>08:30 – 12:00 · 13:30 – 17:30</td></tr>
+          <tr class="off"><td>Jeudi</td><td>Fermé</td></tr>
+          <tr><td>Vendredi</td><td>08:30 – 12:30 · 13:30 – 18:00</td></tr>
+          <tr><td>Samedi</td><td>08:30 – 14:45</td></tr>
+          <tr class="off"><td>Dimanche</td><td>Fermé</td></tr>
+        </table>
+        <a class="maps" href="https://maps.app.goo.gl/a8no2pKJr9WatthE9" target="_blank" rel="noopener">Itinéraire</a>
+      </div>
+      <div class="prat-axe" aria-hidden="true"></div>
+      <div class="prat g rv">
+        <p class="dep">Ardèche — 07</p>
+        <h3>Joyeuse</h3>
+        <p class="adr">12 Rue de la Calade, 07260 Joyeuse</p>
+        <a class="tel" href="tel:+33648738488">06 48 73 84 88</a>
+        <table class="horaires">
+          <tr class="off"><td>Lundi</td><td>Fermé</td></tr>
+          <tr class="off"><td>Mardi</td><td>Fermé</td></tr>
+          <tr><td>Mercredi</td><td>09:00 – 19:00</td></tr>
+          <tr><td>Jeudi</td><td>09:00 – 19:00</td></tr>
+          <tr><td>Vendredi</td><td>09:00 – 19:00</td></tr>
+          <tr><td>Samedi</td><td>08:00 – 16:00</td></tr>
+          <tr class="off"><td>Dimanche</td><td>Fermé</td></tr>
+        </table>
+        <a class="maps" href="https://maps.app.goo.gl/7sQNKdWV5nAKQPun7" target="_blank" rel="noopener">Itinéraire</a>
+      </div>
+    </div>
+
+    <p class="prat-social rv">Suivre la maison : <a href="https://www.instagram.com/karine_l_authentique/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61571406046503" target="_blank" rel="noopener">Facebook</a> · cartes cadeaux disponibles sur <a href="https://lauthentique-coiffure.fr/" target="_blank" rel="noopener">lauthentique-coiffure.fr</a></p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="logo-c"><img src="../assets/logo.jpg" alt="L'Authentique — Salon de coiffure, visagiste, styliste"></div>
+  <p class="duo">Louvroil, Nord — Joyeuse, Ardèche</p>
+  <div class="sep" aria-hidden="true"></div>
+  <p class="li">
+    192 Route d'Avesnes, 59720 Louvroil — <a href="tel:+33327398148">03 27 39 81 48</a><br>
+    12 Rue de la Calade, 07260 Joyeuse — <a href="tel:+33648738488">06 48 73 84 88</a>
+  </p>
+  <p class="demo-note">Démonstration Everywhere — déclinaison créative proposée à L'Authentique. Page non indexée, sans collecte de données ; le module de réservation est une démonstration, aucun rendez-vous réel n'est enregistré.</p>
+</footer>
+
+<a class="pastille-version" href="../"><span class="los">◇</span>Voir l'autre version</a>
+<a class="btn-resa-float" href="#reserver">Réserver</a>
+
+<script>
+(function(){
+'use strict';
+
+/* ----- fil de lecture ----- */
+var fil=document.getElementById('fil-i');
+function majFil(){
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  var p=h>0?(window.scrollY/h):0;
+  fil.style.transform='scaleY('+Math.min(1,Math.max(0,p))+')';
+}
+window.addEventListener('scroll',majFil,{passive:true});
+majFil();
+
+/* ----- reveal ----- */
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('vu'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+}else{
+  document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('vu'); });
+}
+
+/* ----- module réservation multi-salon (démonstration inerte) ----- */
+var SALONS={
+  louvroil:{nom:'Louvroil',dep:'Nord — 59',adr:"192 Route d'Avesnes, 59720 Louvroil",tel:'03 27 39 81 48',
+    open:[1,3,5,6],h:'Lun · Mer · Ven · Sam',
+    slots:['09:00','09:30','10:00','10:30','11:00','11:30','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00']},
+  joyeuse:{nom:'Joyeuse',dep:'Ardèche — 07',adr:'12 Rue de la Calade, 07260 Joyeuse',tel:'06 48 73 84 88',
+    open:[3,4,5,6],h:'Mer · Jeu · Ven · Sam',
+    slots:['09:00','09:30','10:00','10:30','11:00','11:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00']}
+};
+var PRESTA=[
+ {n:'Coupe femme + brushing',d:'45 min',p:'dès 32 €'},
+ {n:'Shampooing, coupe, coiffage',d:'45 min',p:'dès 30 €'},
+ {n:'Coupe homme',d:'20 min',p:'dès 18 €'},
+ {n:'Coupe enfant',d:'20 min',p:'dès 14 €'},
+ {n:'Couleur + coupe',d:'1h30',p:'dès 55 €'},
+ {n:'Mèches / balayage',d:'2h',p:'dès 70 €'},
+ {n:'Lissage au Steampod',d:'1h',p:'dès 40 €'},
+ {n:'Soin profond',d:'30 min',p:'dès 20 €'},
+ {n:'Coiffage / brushing',d:'30 min',p:'dès 22 €'}
+];
+var OFF={'11:30':1,'15:00':1}; /* créneaux « complets » pour le réalisme */
+var S={salon:null,presta:null,day:null,dayLabel:null,time:null,step:1};
+
+function $(id){return document.getElementById(id);}
+function esc(s){return String(s).replace(/</g,'&lt;');}
+function nextDays(openArr,n){
+  var out=[],base=new Date();
+  for(var i=1;out.length<n&&i<45;i++){
+    var dt=new Date(base.getFullYear(),base.getMonth(),base.getDate()+i);
+    if(openArr.indexOf(dt.getDay())>=0) out.push(dt);
+  }
+  return out;
+}
+function fmtDay(dt){
+  try{return dt.toLocaleDateString('fr-FR',{weekday:'short',day:'numeric',month:'short'});}
+  catch(e){return dt.getDate()+'/'+(dt.getMonth()+1);}
+}
+function steps(){
+  var labels=['Salon','Prestation','Créneau','Coordonnées'];
+  $('rp-steps').innerHTML=labels.map(function(l,i){
+    var n=i+1,cls=(n<S.step?'done':(n===S.step?'on':''));
+    return '<div class="resa-step '+cls+'" '+(n<S.step?('onclick="rpGo('+n+')" role="button" tabindex="0"'):'')+'><span class="n">'+(n<S.step?'✓':n)+'</span><span class="lbl">'+l+'</span></div>';
+  }).join('');
+}
+function panel(html){ $('rp-panel').innerHTML=html; }
+function back(to){ return '<button class="rp-back" onclick="rpGo('+to+')">← retour</button>'; }
+
+function render(){
+  steps();
+  if(S.step===1){
+    panel('<p class="rp-title">Dans quel salon&nbsp;?</p><p class="rp-hint">Deux salons, deux régions — tout commence par là.</p>'+
+      '<div class="rp-salons">'+Object.keys(SALONS).map(function(k){var s=SALONS[k];
+        return '<button class="rp-salon'+(S.salon===k?' on':'')+'" onclick="rpSalon(\''+k+'\')">'+
+          '<span class="dep">'+s.dep+'</span><span class="ville" style="display:block">'+s.nom+'</span>'+
+          '<span class="l" style="display:block">'+s.adr+'</span>'+
+          '<span class="l" style="display:block">'+s.tel+'</span>'+
+          '<span class="l" style="display:block">Ouvert : '+s.h+'</span></button>';
+      }).join('')+'</div>');
+  }else if(S.step===2){
+    var s=SALONS[S.salon];
+    panel(back(1)+'<p class="rp-title">Votre prestation</p><p class="rp-hint">Salon de <b>'+s.nom+'</b> — la carte de L\'Authentique.</p>'+
+      '<div class="rp-prestas">'+PRESTA.map(function(p,i){
+        return '<button class="rp-pr" onclick="rpPresta('+i+')"><span><span class="nm">'+p.n+'</span> <span class="du">· '+p.d+'</span></span><span class="px">'+p.p+'</span></button>';
+      }).join('')+'</div><p class="rp-note">Prestations et tarifs indicatifs pour la démonstration — repris de la carte de L\'Authentique.</p>');
+  }else if(S.step===3){
+    var s=SALONS[S.salon];var days=nextDays(s.open,8);
+    panel(back(2)+'<p class="rp-title">Choisissez un créneau</p><p class="rp-hint"><b>'+esc(S.presta.n)+'</b> · '+S.presta.d+' · salon de '+s.nom+'</p>'+
+      '<div class="rp-days">'+days.map(function(dt){var iso=dt.toISOString().slice(0,10);var parts=fmtDay(dt).split(' ');
+        return '<button class="rp-day'+(S.day===iso?' on':'')+'" onclick="rpDay(\''+iso+'\',\''+esc(fmtDay(dt))+'\')"><span class="dw" style="display:block">'+(parts[0]||'')+'</span><span class="dn" style="display:block">'+(parts[1]||dt.getDate())+'</span><span class="mo" style="display:block">'+(parts[2]||'')+'</span></button>';
+      }).join('')+'</div>'+
+      (S.day?'<div class="rp-slots">'+s.slots.map(function(t){var off=OFF[t];
+        return '<button class="rp-slot'+(off?' off':'')+(S.time===t?' on':'')+'" '+(off?'disabled':'onclick="rpTime(\''+t+'\')"')+'>'+t+'</button>';
+      }).join('')+'</div>':'<p class="rp-hint" style="margin-top:20px">Sélectionnez d\'abord un jour.</p>')+
+      '<p class="rp-note">Créneaux d\'exemple pour la démonstration.</p>');
+  }else if(S.step===4){
+    var s=SALONS[S.salon];
+    panel(back(3)+'<p class="rp-title">Vos coordonnées</p><p class="rp-hint">Dernière étape.</p>'+
+      '<div class="rp-recap"><p class="l">Votre rendez-vous</p><b>'+esc(S.presta.n)+'</b><br>Salon de '+s.nom+' · '+S.dayLabel+' à '+S.time+'</div>'+
+      '<div class="rp-form">'+
+        '<div class="rp-fld"><label for="rp-fn">Prénom</label><input id="rp-fn" autocomplete="given-name" placeholder="Prénom"></div>'+
+        '<div class="rp-fld"><label for="rp-ln">Nom</label><input id="rp-ln" autocomplete="family-name" placeholder="Nom"></div>'+
+        '<div class="rp-fld"><label for="rp-tel">Téléphone</label><input id="rp-tel" autocomplete="tel" placeholder="06 …"></div>'+
+        '<div class="rp-fld"><label for="rp-mail">Email</label><input id="rp-mail" autocomplete="email" placeholder="vous@email.fr"></div>'+
+        '<div class="rp-fld full"><label for="rp-msg">Note (facultatif)</label><textarea id="rp-msg" rows="2" placeholder="Coiffeuse préférée, précisions…"></textarea></div>'+
+      '</div>'+
+      '<button class="rp-cta" onclick="rpConfirm()">Confirmer ma réservation</button>'+
+      '<p class="rp-note">Démonstration — aucun rendez-vous réel n\'est enregistré.</p>'+
+      '<div id="rp-result"></div>');
+  }
+  $('rp-panel').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+window.rpGo=function(n){ S.step=n; render(); };
+window.rpSalon=function(k){ S.salon=k; S.presta=null; S.day=null; S.time=null; S.step=2; render(); };
+window.rpPresta=function(i){ S.presta=PRESTA[i]; S.day=null; S.time=null; S.step=3; render(); };
+window.rpDay=function(iso,lbl){ S.day=iso; S.dayLabel=lbl; S.time=null; render(); };
+window.rpTime=function(t){ S.time=t; S.step=4; render(); };
+window.rpConfirm=function(){
+  var s=SALONS[S.salon];
+  $('rp-result').innerHTML='<div class="rp-demo"><p class="t">Démonstration — module optionnel</p>'+
+    '<p>Aucun rendez-vous réel n\'est enregistré. Dans la version en service&nbsp;: confirmation par SMS ou email, et le rendez-vous entre dans l\'agenda du salon de '+s.nom+'.</p></div>';
+  $('rp-result').scrollIntoView({behavior:'smooth',block:'nearest'});
+};
+render();
+})();
+</script>
+
+</body>
+</html>

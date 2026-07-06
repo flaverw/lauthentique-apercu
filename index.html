@@ -1087,16 +1087,20 @@ var EnergyPlus_vars = {"ajax_url":"https:\/\/lauthentique-coiffure.fr\/wp-admin\
 <script type='text/javascript' src='https://lauthentique-coiffure.fr/wp-content/plugins/energy-plus/public/js/energyplus.js?ver=5.9.8' id='energyplus-js'></script>
 
 <a href="#ew-module" onclick="ewScroll(event)" class="ew-float">Réserver en ligne</a>
+<a id="ew-version-link" class="ew-version" href="#"><span class="ew-los">◇</span>Voir l'autre version</a>
 <div class="ew-demo-banner">✦ Démonstration <b>Everywhere</b> — le site de L'Authentique, tel quel + notre module de réservation greffé<a id="ew-offre-link" class="ew-offre" href="#">Voir l'offre →</a></div>
-<script>(function(){var a=document.getElementById('ew-offre-link');if(a){a.href=new URL('offre/',window.location.href).href;}})();</script>
+<script>(function(){var a=document.getElementById('ew-offre-link');if(a){a.href=new URL('offre/',window.location.href).href;}var v=document.getElementById('ew-version-link');if(v){v.href=new URL('nouvelle-da/',window.location.href).href;}})();</script>
 <style>
 .ew-float{position:fixed;right:18px;bottom:20px;z-index:9990;background:#BC0C06;color:#fff;font-family:'Helvetica Neue',Arial,sans-serif;letter-spacing:.5px;font-weight:600;font-size:.9rem;text-decoration:none;padding:14px 22px;border-radius:999px;box-shadow:0 10px 26px rgba(188,12,6,.35)}
 .ew-float:hover{background:#9d0a05}
+.ew-version{position:fixed;left:18px;bottom:20px;z-index:9990;background:#111;color:#ede6de;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.78rem;letter-spacing:.5px;font-weight:600;text-decoration:none;padding:12px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.25);box-shadow:0 10px 26px rgba(17,17,17,.3)}
+.ew-version:hover{color:#fff;border-color:#e8b3b1}
+.ew-version .ew-los{color:#e8b3b1;margin-right:7px}
 .ew-demo-banner{position:fixed;bottom:0;left:0;right:0;z-index:9980;background:#111;color:#fff;text-align:center;font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:.6px;padding:6px 200px 6px 14px}
 .ew-demo-banner b{color:#e8b3b1}
 .ew-offre{color:#e8b3b1;text-decoration:none;font-weight:600;margin-left:14px;padding-left:14px;border-left:1px solid rgba(255,255,255,.25);white-space:nowrap}
 .ew-offre:hover{color:#fff;text-decoration:underline}
-@media(max-width:640px){.ew-float{font-size:.8rem;padding:11px 16px;bottom:32px}.ew-demo-banner{font-size:9px;padding:5px 8px}.ew-offre{margin-left:8px;padding-left:8px}}
+@media(max-width:640px){.ew-float{font-size:.8rem;padding:11px 16px;bottom:32px}.ew-version{font-size:.7rem;padding:9px 13px;bottom:32px;left:12px}.ew-demo-banner{font-size:9px;padding:5px 8px}.ew-offre{margin-left:8px;padding-left:8px}}
 </style>
 <script>
 (function(){

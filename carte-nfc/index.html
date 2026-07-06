@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Carte NFC — L'Authentique (recto-verso, 85,6 × 54 mm)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+@page{ size:85.6mm 54mm; margin:0; }
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ivoire:#F7F3EE;
+  --encre:#161210;
+  --rouge:#BC0C06;
+  --taupe:#8A8178;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Archivo',Arial,sans-serif;
+}
+body{font-family:var(--sans);background:#DED7CE;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+/* ---------- habillage écran (masqué à l'impression) ---------- */
+.ecran{max-width:520px;margin:0 auto;padding:34px 20px 60px;text-align:center}
+.ecran h1{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.7rem;color:var(--encre)}
+.ecran p{font-size:12.5px;color:#6d6259;margin-top:6px;line-height:1.6}
+.ecran .lab{font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--rouge);font-weight:600;margin:30px 0 10px}
+.planche{display:flex;justify-content:center}
+
+/* ---------- la carte : 85,6 × 54 mm exactement ---------- */
+.face{width:85.6mm;height:54mm;overflow:hidden;position:relative;background:var(--ivoire)}
+.ecran .face{box-shadow:0 14px 34px rgba(22,18,16,.25);border-radius:2.5mm}
+
+/* ----- recto ----- */
+.recto{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border-top:2.2mm solid var(--rouge)}
+.recto .fil{position:absolute;top:0;left:50%;width:.25mm;height:100%;background:linear-gradient(to bottom,var(--rouge) 0,var(--rouge) 22%,transparent 22%,transparent 78%,var(--rouge) 78%,var(--rouge) 100%);opacity:.55}
+.recto .logo{width:52mm;background:#fff;padding:1.6mm 2.6mm;position:relative}
+.recto .logo img{width:100%;display:block}
+.recto .maison{font-family:var(--serif);font-style:italic;font-size:3.4mm;color:var(--rouge);margin-top:2.6mm;background:var(--ivoire);padding:0 2mm;position:relative}
+.recto .nfc{position:absolute;bottom:2.6mm;left:0;right:0;font-size:1.9mm;letter-spacing:.55mm;text-transform:uppercase;color:var(--taupe);background:var(--ivoire)}
+.recto .nfc svg{vertical-align:-.55mm;margin-right:1mm}
+
+/* ----- verso ----- */
+.verso{background:var(--encre);color:var(--ivoire);display:flex;align-items:center;padding:4mm 4.5mm;gap:4mm}
+.verso .qr-c{flex:none;background:#fff;padding:1.6mm;border-radius:1.2mm}
+.verso .qr-c img{width:20.5mm;height:20.5mm;display:block}
+.verso .qr-l{font-size:1.7mm;letter-spacing:.4mm;text-transform:uppercase;color:var(--taupe);text-align:center;margin-top:1.1mm}
+.verso .infos{flex:1;min-width:0}
+.verso .resa{font-family:var(--serif);font-style:italic;font-weight:600;font-size:3.9mm;line-height:1.12;color:#fff}
+.verso .resa em{color:#E8B3B1;font-style:italic}
+.verso .salons{margin-top:2.4mm;border-top:.25mm solid rgba(247,243,238,.28);padding-top:2.1mm}
+.verso .s{margin-top:1.4mm}
+.verso .s:first-child{margin-top:0}
+.verso .dep{font-size:1.7mm;letter-spacing:.5mm;text-transform:uppercase;color:#E8B3B1;font-weight:600}
+.verso .ville{font-family:var(--serif);font-style:italic;font-weight:600;font-size:3.1mm;line-height:1.15}
+.verso .co{font-size:1.95mm;color:#CFC6BB;line-height:1.35}
+.verso .co b{color:#fff;font-weight:600}
+
+/* ---------- impression : deux pages exactes ---------- */
+@media print{
+  body{background:none}
+  .ecran .hab{display:none}
+  .ecran{max-width:none;padding:0;margin:0}
+  .planche{display:block}
+  .ecran .face{box-shadow:none;border-radius:0}
+  .face{page-break-after:always}
+  .face:last-of-type{page-break-after:auto}
+}
+</style>
+</head>
+<body>
+<div class="ecran">
+  <div class="hab">
+    <h1>Carte NFC — L'Authentique</h1>
+    <p>Format CR80 (carte bancaire) : <b>85,6 × 54 mm</b>, recto-verso.<br>
+    Imprimer ce fichier tel quel (échelle 100 %, marges à zéro) : la page 1 est le recto, la page 2 le verso.<br>
+    La puce NFC et le QR pointent vers la réservation en ligne.</p>
+    <p class="lab">Recto</p>
+  </div>
+
+  <div class="planche">
+    <div class="face recto">
+      <span class="fil" aria-hidden="true"></span>
+      <div class="logo"><img src="logo.jpg" alt="L'Authentique — Salon de coiffure, visagiste, styliste"></div>
+      <p class="maison">Une seule maison. Deux salons.</p>
+      <p class="nfc">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#8A8178" stroke-width="2" stroke-linecap="round"><path d="M8.5 15.5a5 5 0 0 1 7 0"/><path d="M5.5 12.5a9.2 9.2 0 0 1 13 0"/><circle cx="12" cy="18.5" r="1" fill="#8A8178" stroke="none"/></svg>
+        Approchez la carte de votre téléphone
+      </p>
+    </div>
+  </div>
+
+  <div class="hab"><p class="lab">Verso</p></div>
+
+  <div class="planche">
+    <div class="face verso">
+      <div>
+        <div class="qr-c"><img src="qr-lauthentique.png" alt="QR code — réservation en ligne"></div>
+        <p class="qr-l">Scannez</p>
+      </div>
+      <div class="infos">
+        <p class="resa">Réservez en ligne,<br><em>dans votre salon.</em></p>
+        <div class="salons">
+          <div class="s">
+            <span class="dep">Nord — 59</span>
+            <p class="ville">Louvroil</p>
+            <p class="co">192 Route d'Avesnes · <b>03 27 39 81 48</b></p>
+          </div>
+          <div class="s">
+            <span class="dep">Ardèche — 07</span>
+            <p class="ville">Joyeuse</p>
+            <p class="co">12 Rue de la Calade · <b>06 48 73 84 88</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hab">
+    <p style="margin-top:26px">Démonstration Everywhere — prototype de carte, non contractuel.</p>
+  </div>
+</div>
+</body>
+</html>
