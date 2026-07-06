@@ -1,76 +1,61 @@
-<!-- cadenas-everywhere -->
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Accès protégé — Everywhere</title>
+<title>L'Authentique × Everywhere — Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;1,600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--noir:#14110f;--or:#c9a24b;--creme:#f3ecdd}
+:root{--rouge:#BC0C06}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;min-height:100vh;
- background:radial-gradient(120% 120% at 50% 0%,#241f1a,var(--noir));color:var(--creme);
- display:flex;align-items:center;justify-content:center;padding:24px}
-.card{max-width:420px;width:100%;text-align:center}
-.mark{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--or);margin-bottom:18px}
-.lock{font-size:40px;margin-bottom:14px}
-h1{font-size:22px;font-weight:600;line-height:1.25;margin-bottom:8px}
-p.sub{font-size:14px;color:#b9b0a0;margin-bottom:22px;line-height:1.5}
-form{display:flex;gap:8px;flex-direction:column}
-input{width:100%;background:#1c1814;border:1px solid rgba(201,162,75,.4);color:var(--creme);
- padding:14px 16px;font-size:16px;border-radius:8px;text-align:center;letter-spacing:.05em}
-input:focus{outline:none;border-color:var(--or)}
-button{background:var(--or);color:var(--noir);border:none;padding:14px;font-size:15px;font-weight:600;
- border-radius:8px;cursor:pointer;letter-spacing:.03em}
-button:hover{filter:brightness(1.08)}
-.err{color:#e6857a;font-size:13px;min-height:18px;margin-top:4px}
-.foot{margin-top:26px;font-size:11px;color:#7c7364;line-height:1.5}
-</style></head>
+body{font-family:'Montserrat',sans-serif;min-height:100vh;background:#141414;color:#fff;display:flex;align-items:center;justify-content:center;padding:24px}
+.hub{width:100%;max-width:420px;text-align:center}
+.ev{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#e8b3b1;margin-bottom:18px}
+.logo{background:#fff;border-radius:12px;padding:16px 20px;display:inline-block;margin-bottom:16px}
+.logo img{height:48px;display:block}
+h1{font-family:'Crimson Text',serif;font-size:25px;margin-bottom:2px}
+.tag{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#bdb5b2;margin-bottom:22px}
+a.b{display:flex;align-items:center;gap:14px;text-align:left;background:#1f1f1f;border:1px solid #333;border-radius:16px;padding:16px 18px;margin-bottom:12px;color:#fff;text-decoration:none;transition:.15s}
+a.b:active{transform:scale(.98)}
+a.b .ic{font-size:22px;width:28px;text-align:center}
+a.b .t{flex:1}
+a.b .t .h{font-family:'Crimson Text',serif;font-size:17px;display:block;line-height:1.15}
+a.b .t .s{font-size:12px;color:#bdb5b2;display:block;margin-top:2px}
+a.b .ar{font-size:20px;color:var(--rouge)}
+a.b.prim{background:var(--rouge);border-color:var(--rouge)}
+a.b.prim .t .s{color:#f3d3d1}
+a.b.prim .ar{color:#fff}
+a.etude{display:flex;align-items:center;gap:14px;text-align:left;text-decoration:none;color:#fff;margin-top:6px;background:linear-gradient(100deg,#22453a,#356453);border:1px solid #4d7a67;border-radius:16px;padding:16px 18px;transition:.15s}
+a.etude:active{transform:scale(.98)}
+a.etude .ic{font-size:24px;width:28px;text-align:center}
+a.etude .t{flex:1}
+a.etude .t .l{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:#c9a565;display:block}
+a.etude .t .h{font-family:'Crimson Text',serif;font-size:17px;display:block;line-height:1.15;margin-top:2px}
+a.etude .t .s{font-size:12px;color:#cfe0d1;display:block;margin-top:2px}
+a.etude .ar{font-size:20px;color:#c9a565}
+.foot{margin-top:18px;font-size:11px;color:#bdb5b2}
+</style>
+</head>
 <body>
-<div class="card">
-  <div class="mark">Everywhere</div>
-  <div class="lock">&#128274;</div>
-  <h1>Accès protégé</h1>
-  <p class="sub">Cette démonstration est réservée. Saisissez votre code d'accès pour la consulter.</p>
-  <form id="f"><input id="pw" type="password" placeholder="Code d'accès" autocomplete="off" autofocus>
-  <button type="submit">Entrer</button></form>
-  <div class="err" id="e"></div>
-  <div class="foot">Everywhere — cabinet d'accompagnement numérique.<br>Contenu chiffré. Un code par visiteur, communiqué par Everywhere.</div>
+<div class="hub">
+  <div class="ev">Everywhere · Hub commercial</div>
+  <div class="logo"><img src="../assets/logo.jpg" alt="L'Authentique"></div>
+  <h1>L'Authentique</h1>
+  <div class="tag">Tout pour l'échange, en un écran</div>
+
+  <a class="b prim" href="../" target="_blank" rel="noopener">
+    <span class="ic">✂️</span><span class="t"><span class="h">Voir la maquette</span><span class="s">Son site live — choisir Louvroil, réserver</span></span><span class="ar">→</span>
+  </a>
+  <a class="b" href="../proposition/">
+    <span class="ic">📄</span><span class="t"><span class="h">La proposition</span><span class="s">Version mobile à montrer / envoyer</span></span><span class="ar">→</span>
+  </a>
+  <a class="etude" href="../etude/?e=L%27Authentique">
+    <span class="ic">🧮</span><span class="t"><span class="l">En bonus · sous 48 h</span><span class="h">L'étude d'économies</span><span class="s">Ses contrats passés au crible — remplacer, améliorer, renégocier</span></span><span class="ar">→</span>
+  </a>
+  <div class="foot">Prix = arbitrage Everywhere · l'humain signe</div>
 </div>
-<script>
-(function(){
- var D={"v":1,"iters":210000,"iv":"7ysiqAtiXQ18IxEU","ct":"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","wraps":[{"role":"client","salt":"LrreYoi5rVYKAr7pMc/q7A==","iv":"eujTgTICfUPBSsCK","wrapped":"52cqPT/z9MBwLXuxo7YNU1Lz/V9jt/4Hwzp6hEAoglDZxbnwNCMZYPuOvHv7o7A1"}]};
- var dec=function(s){var b=atob(s),u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u;};
- var enc=new TextEncoder();
- async function derive(pw,salt){
-  var km=await crypto.subtle.importKey('raw',enc.encode(pw),'PBKDF2',false,['deriveKey']);
-  return crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:D.iters,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
- }
- async function tryUnlock(pw){
-  for(var i=0;i<D.wraps.length;i++){
-   var w=D.wraps[i];
-   try{
-    var wk=await derive(pw,dec(w.salt));
-    var ckRaw=new Uint8Array(await crypto.subtle.decrypt({name:'AES-GCM',iv:dec(w.iv)},wk,dec(w.wrapped)));
-    var ck=await crypto.subtle.importKey('raw',ckRaw,'AES-GCM',false,['decrypt']);
-    var html=new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:dec(D.iv)},ck,dec(D.ct)));
-    return {ok:true,role:w.role,html:html};
-   }catch(e){}
-  }
-  return {ok:false};
- }
- function render(html){document.open();document.write(html);document.close();}
- async function boot(){
-  var pw=null;try{pw=sessionStorage.getItem('ew_pass');}catch(e){}
-  if(pw){var r=await tryUnlock(pw);if(r.ok){render(r.html);return;}}
-  document.getElementById('f').addEventListener('submit',async function(ev){
-   ev.preventDefault();
-   var v=document.getElementById('pw').value;
-   document.getElementById('e').textContent='';
-   var r=await tryUnlock(v);
-   if(r.ok){try{sessionStorage.setItem('ew_pass',v);}catch(e){}render(r.html);}
-   else{document.getElementById('e').textContent='Code incorrect.';document.getElementById('pw').select();}
-  });
- }
- if(!crypto||!crypto.subtle){document.getElementById('e').textContent='Navigateur non compatible.';}else{boot();}
-})();
-</script>
-</body></html>
+</body>
+</html>
